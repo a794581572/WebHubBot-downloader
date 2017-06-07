@@ -9,10 +9,8 @@ const task = async function () {
     const porns = await getPorns();
     for (const porn of porns) {
       const videoUrl = await pornhub.getDownloadUrlFromPageUrl(porn.link_url);
-      console.log(videoUrl);
-      const ok = await downloader.downloadFromUrl(videoUrl);
-      if (ok !== true) {
-        continue;
+      if (videoUrl.length > 0) {
+        await downloader.downloadFromUrl(videoUrl);
       }
     }
   } catch (error) {
