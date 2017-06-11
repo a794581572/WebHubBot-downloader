@@ -44,17 +44,21 @@ exports.getDownloadUrlFromPageUrl = function (pageUrl) {
           log.error(err.message);
           resolve('');
         }
-        const startIndex = res.text.indexOf('mediaDefinitions');
-        const endIndex = res.text.indexOf('video_unavailable_country');
-        let str = res.text.substring(startIndex, endIndex);
-        str = str.substring(18, str.length - 2);
-        try {
-          const infoArr = JSON.parse(str);
-          resolve(getBestQuality(infoArr));
-        } catch (error) {
-          log.warn('Throw an error! Download next one!');
-          log.error(error.message);
-          // reject(error);
+        if (res && res.text) {
+          const startIndex = res.text.indexOf('mediaDefinitions');
+          const endIndex = res.text.indexOf('video_unavailable_country');
+          let str = res.text.substring(startIndex, endIndex);
+          str = str.substring(18, str.length - 2);
+          try {
+            const infoArr = JSON.parse(str);
+            resolve(getBestQuality(infoArr));
+          } catch (error) {
+            log.warn('Throw an error! Download next one!');
+            log.error(error.message);
+            // reject(error);
+            resolve('');
+          }
+        } else {
           resolve('');
         }
       });
