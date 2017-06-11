@@ -5,6 +5,7 @@
 ![downloads](./readme/downloads.png)
 
 ## Usage
+0. 先用@xiyouMc 的 [WebHubBot](https://github.com/xiyouMc/WebHubBot)爬一些数据到本地mongodb  
 1. 确保mongodb服务已经运行
 2. 克隆本仓库  
 3. 用终端切换到该仓库目录  
@@ -17,7 +18,7 @@ PS: 这是用node.js写的程序, 所以在跑程序之前，你需要从node.js
 ## 配置
 可以修改 `src/config.js` 来改变一些配置参数   
 `NUM`: 你想下多少个视频? 默认值是 100  
-`DOWNLOAD_DIR`: 下载文件的目录， 默认是 'downloads/' 
+`DOWNLOAD_DIR`: 下载文件的目录， 默认是 'downloads/'   
 `TIMEOUT`: 超时时间, 默认是3分钟
 
 ## 下载速度

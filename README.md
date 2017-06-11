@@ -5,6 +5,7 @@ Download videos from xiyouMc's [WebHubBot](https://github.com/xiyouMc/WebHubBot)
 ![downloads](./readme/downloads.png)
 
 ## Usage
+0. get some data from xiyouMc's [WebHubBot](https://github.com/xiyouMc/WebHubBot) to your local mongodb.  
 1. make sure that mongodb is running.
 2. clone this project.  
 3. go to the directory on the terminal.  
