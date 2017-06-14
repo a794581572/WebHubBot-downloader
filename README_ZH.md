@@ -9,7 +9,7 @@
 1. 确保mongodb服务已经运行
 2. 克隆本仓库  
 3. 用终端切换到该仓库目录  
-4. 执行 `nmp install`  
+4. 执行 `npm install`  
 5. 执行 `npm start`  
 6. 抽根烟慢慢等吧!(所有视频会下载在 `downloads/` 文件夹)  
 

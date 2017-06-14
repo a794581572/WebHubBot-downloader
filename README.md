@@ -9,7 +9,7 @@ Download videos from xiyouMc's [WebHubBot](https://github.com/xiyouMc/WebHubBot)
 1. make sure that mongodb is running.
 2. clone this project.  
 3. go to the directory on the terminal.  
-4. run `nmp install`  
+4. run `npm install`  
 5. run `npm start`  
 6. waiting and then enjoy!(videos will be downloaded on the `downloads/` folder)  
 
