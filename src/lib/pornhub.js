@@ -43,6 +43,7 @@ exports.getDownloadUrlFromPageUrl = function (pageUrl) {
           log.warn('throw an error! download next page!');
           log.error(err.message);
           resolve('');
+          return;
         }
         if (res && res.text) {
           const startIndex = res.text.indexOf('mediaDefinitions');
